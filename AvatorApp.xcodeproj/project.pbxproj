@@ -11,6 +11,11 @@
 		B364BD3B2B2DEC9B00D9A973 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364BD3A2B2DEC9B00D9A973 /* ContentView.swift */; };
 		B364BD3D2B2DEC9C00D9A973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B364BD3C2B2DEC9C00D9A973 /* Assets.xcassets */; };
 		B364BD402B2DEC9C00D9A973 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B364BD3F2B2DEC9C00D9A973 /* Preview Assets.xcassets */; };
+		B364BD482B2DEE2B00D9A973 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = B364BD472B2DEE2B00D9A973 /* URLImage */; };
+		B364BD4A2B2DEE2B00D9A973 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = B364BD492B2DEE2B00D9A973 /* URLImageStore */; };
+		B364BD4D2B2DF30F00D9A973 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364BD4C2B2DF30F00D9A973 /* User.swift */; };
+		B364BD502B2DF37900D9A973 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364BD4F2B2DF37900D9A973 /* Api.swift */; };
+		B364BD532B2DF41700D9A973 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B364BD522B2DF41700D9A973 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,9 @@
 		B364BD3A2B2DEC9B00D9A973 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B364BD3C2B2DEC9C00D9A973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B364BD3F2B2DEC9C00D9A973 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B364BD4C2B2DF30F00D9A973 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B364BD4F2B2DF37900D9A973 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		B364BD522B2DF41700D9A973 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B364BD4A2B2DEE2B00D9A973 /* URLImageStore in Frameworks */,
+				B364BD482B2DEE2B00D9A973 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +61,11 @@
 		B364BD372B2DEC9B00D9A973 /* AvatorApp */ = {
 			isa = PBXGroup;
 			children = (
+				B3E1253E2B2E53F3003893AE /* View */,
 				B364BD382B2DEC9B00D9A973 /* AvatorAppApp.swift */,
-				B364BD3A2B2DEC9B00D9A973 /* ContentView.swift */,
+				B364BD512B2DF40200D9A973 /* ViewModel */,
+				B364BD4B2B2DF2F300D9A973 /* Model */,
+				B364BD4E2B2DF36800D9A973 /* Repository */,
 				B364BD3C2B2DEC9C00D9A973 /* Assets.xcassets */,
 				B364BD3E2B2DEC9C00D9A973 /* Preview Content */,
 			);
@@ -65,6 +78,38 @@
 				B364BD3F2B2DEC9C00D9A973 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B364BD4B2B2DF2F300D9A973 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B364BD4C2B2DF30F00D9A973 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B364BD4E2B2DF36800D9A973 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B364BD4F2B2DF37900D9A973 /* Api.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B364BD512B2DF40200D9A973 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B364BD522B2DF41700D9A973 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B3E1253E2B2E53F3003893AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B364BD3A2B2DEC9B00D9A973 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +128,10 @@
 			dependencies = (
 			);
 			name = AvatorApp;
+			packageProductDependencies = (
+				B364BD472B2DEE2B00D9A973 /* URLImage */,
+				B364BD492B2DEE2B00D9A973 /* URLImageStore */,
+			);
 			productName = AvatorApp;
 			productReference = B364BD352B2DEC9B00D9A973 /* AvatorApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +160,9 @@
 				Base,
 			);
 			mainGroup = B364BD2C2B2DEC9B00D9A973;
+			packageReferences = (
+				B364BD462B2DEE2B00D9A973 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = B364BD362B2DEC9B00D9A973 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +191,9 @@
 			files = (
 				B364BD3B2B2DEC9B00D9A973 /* ContentView.swift in Sources */,
 				B364BD392B2DEC9B00D9A973 /* AvatorAppApp.swift in Sources */,
+				B364BD502B2DF37900D9A973 /* Api.swift in Sources */,
+				B364BD532B2DF41700D9A973 /* UserViewModel.swift in Sources */,
+				B364BD4D2B2DF30F00D9A973 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +394,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B364BD462B2DEE2B00D9A973 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B364BD472B2DEE2B00D9A973 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B364BD462B2DEE2B00D9A973 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		B364BD492B2DEE2B00D9A973 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B364BD462B2DEE2B00D9A973 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B364BD2D2B2DEC9B00D9A973 /* Project object */;
 }
